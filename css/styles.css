@@ -76,7 +76,7 @@ img {
 
 .container {
   /* Phohe styles & > */
-  min-width: 320px;
+  /* min-width: 320px; */
   max-width: 428px;
   margin-left: auto;
   margin-right: auto;
@@ -271,30 +271,58 @@ img {
   pointer-events: initial;
   transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: scroll;
+  
 }
 
-@media screen and (orientation: lanscape) {
+@media screen and (orientation:lanscape) {
   .backdrop {
     overflow: auto;
   }
 }
 
-.modal {
-  position: absolute;
-  width: 408px;
-  min-height: 584px;
-  background: var(--dairy);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding-top: 72px;
-  padding-right: 24px;
-  padding-bottom: 24px;
-  padding-left: 24px;
+@media only screen and (max-width: 427px) {
+  .modal {  
+    
+    position: absolute;
+    width: calc(100% - 30px);
+    min-height: 584px;
+    background: var(--dairy);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 72px;
+    padding-right: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    
+  }
 }
+
+
+@media only screen and (min-width: 428px) {
+  .modal {
+    position: absolute;
+    width: 408px;
+    min-height: 584px;
+    background: var(--dairy);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 72px;
+    padding-right: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+}
+}
+
+
 .modal-btn {
   position: absolute;
   top: 24px;
@@ -464,6 +492,15 @@ img {
     outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media only screen and (max-width: 427px) {
+  .name-modal,
+.tel-modal,
+.email-modal {
+
+     width: 100%;
+  }
+}
+
 .name-modal:focus,
 .tel-modal:focus,
 .email-modal:focus,
@@ -471,6 +508,8 @@ img {
   outline: 1px solid var(--iris);
   border: 1px solid transparent;
 }
+
+
 
 .modal-textarea {
   width: 360px;
@@ -484,6 +523,11 @@ img {
   border-radius: 4px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media only screen and (max-width: 427px) {
+  .modal-textarea{
+   width: 100%;
+  }
 }
 
 .backdrop.is-hidden {
@@ -812,8 +856,6 @@ img {
     display: none;
   }
 }
-.section-work {
-}
 
 /* mob i tab */
 
@@ -835,6 +877,7 @@ img {
     display: flex;
     flex-direction: column;
     gap: 72px;
+    align-items: center;
   }
 }
 
@@ -863,7 +906,7 @@ img {
 }
 @media only screen and (max-width: 767px) {
   .work-team {
-    margin-left: 82px;
+
     width: 264px;
     height: 428px;
   }
@@ -962,6 +1005,7 @@ img {
   .customers-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 
     gap: 72px 16px;
     border: rgba(0, 0, 0, 0.25);
@@ -1165,7 +1209,7 @@ img {
   .social {
     max-width: 208px;
     height: 80px;
-    margin-left: 110px;
+   
     margin-bottom: 72px;
   }
 }
@@ -1221,11 +1265,14 @@ img {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
+    justify-content: center;
+   
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1157px) {
   .footer-tumb {
-    padding-left: 108px;
+   max-width: 582px;
+   justify-content: flex-start;
   }
 }
 
@@ -1236,11 +1283,17 @@ img {
   }
 }
 
+@media only screen and (max-width: maxwidthpx) {
+  .section-one{
+    margin-bottom: 72px;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .section-one {
-    max-width: 264px;
+    max-width: 268px;
     height: 112px;
-    margin-left: 80px;
+    /* margin-left: 80px; */
     margin-bottom: 72px;
   }
 }
@@ -1260,6 +1313,7 @@ img {
     margin-right: 120px;
   }
 }
+
 
 .subscrib {
   width: 398px;
@@ -1284,17 +1338,29 @@ img {
   padding-left: 16px;
 }
 
+
+
+@media only screen and (max-width: 427px) {
+  .subscrib-box {
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .subscrib-box {
     margin-bottom: 16px;
+    width: 100%;
   }
 }
+
+
 
 @media only screen and (min-width: 768px) {
   .subscrib-box {
     width: 264px;
   }
 }
+
 
 .subscrib-form input::placeholder {
   color: var(--white);
@@ -1328,6 +1394,13 @@ img {
   margin: 0 auto;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .subscrib-btn {
+   margin-left: 24px;
+ }
+}
+
 .subscrib-icon {
   margin-left: 16px;
   fill: var(--white);
@@ -1390,10 +1463,12 @@ img {
   top: 0;
   left: 0;
   width: 100vw;
-  /* min-height: 100vh; */
+  height: 100vh;
   padding: 80px 35px 40px 40px;
   background-color: var(--white);
   z-index: 999;
+  display: flex;
+  flex-direction: column;
 
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
@@ -1418,7 +1493,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  margin-bottom: 284px;
+  margin-bottom: auto;
 }
 
 .mobile-menu .link {
@@ -1434,15 +1509,30 @@ img {
   letter-spacing: 0.02em;
   text-transform: capitalize;
 }
-.mocontact-link {
-  text-decoration: none;
-  color: var(--iris);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
+
+@media only screen and (max-width: 427px) {
+  .mocontact-link { text-decoration: none;
+    color: var(--iris);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    
+  }
 }
+@media only screen and (min-width: 428px) {
+  .mocontact-link{
+    text-decoration: none;
+    color: var(--iris);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+}
+}
+
 
 .mocontact-link-mail {
   font-weight: 500;
@@ -1459,11 +1549,26 @@ img {
   margin-bottom: 48px;
 }
 
-.mobile-list {
+@media only screen and (max-width: 427px) {
+  .mobile-list{
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+  }
+}
+@media only screen and (min-width: 428px) {
+  .mobile-list {
+    display: flex;
+    justify-content: center;
+    gap: 56px;
+  }
+}
+
+/* .mobile-list {
   display: flex;
   justify-content: center;
   gap: 56px;
-}
+} */
 .mobile-link:hover,
 .mobile-link:focus {
   color: var(--ocean);
