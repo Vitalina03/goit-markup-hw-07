@@ -283,7 +283,6 @@ img {
 
 @media only screen and (max-width: 427px) {
   .modal {  
-    
     position: absolute;
     width: calc(100% - 30px);
     min-height: 584px;
@@ -297,17 +296,24 @@ img {
     padding-top: 72px;
     padding-right: 24px;
     padding-bottom: 24px;
-    padding-left: 24px;
+    padding-left: 24px; 
+
     
   }
 }
 
+@media only screen and (max-width: 1157px) {
+  .modal{
+    height: 586px; 
+    max-height: 90vh;
+     overflow-y: scroll;
+  }
+}
 
 @media only screen and (min-width: 428px) {
   .modal {
     position: absolute;
     width: 408px;
-    min-height: 584px;
     background: var(--dairy);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
       0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -320,6 +326,12 @@ img {
     padding-bottom: 24px;
     padding-left: 24px;
 }
+}
+
+@media only screen and (min-width: 1158px) {
+  .modal {
+    min-height: 584px;
+  }
 }
 
 
@@ -1293,7 +1305,9 @@ img {
   .section-one {
     max-width: 268px;
     height: 112px;
-    /* margin-left: 80px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 72px;
   }
 }
@@ -1564,11 +1578,6 @@ img {
   }
 }
 
-/* .mobile-list {
-  display: flex;
-  justify-content: center;
-  gap: 56px;
-} */
 .mobile-link:hover,
 .mobile-link:focus {
   color: var(--ocean);
